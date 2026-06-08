@@ -62,7 +62,7 @@ export default function SchoolProfile() {
     ],
   });
 
-  const [dataRinci, setDataRinci] = useState({
+  const [dataRinci] = useState({
     waktuPenyelenggaraan: "Pagi/6 Hari",
     bersediaMenerimaBOS: "Ya",
     sertifikasiISO: "9001:2015",
@@ -83,7 +83,7 @@ export default function SchoolProfile() {
     latency: "5 ms",
   });
 
-  const [kompetensiKeahlian, setKompetensiKeahlian] = useState([
+  const [kompetensiKeahlian] = useState([
     {
       bidang: "Teknologi Informasi dan Komunikasi",
       program: "Teknik Komputer dan Informatika",
@@ -93,7 +93,7 @@ export default function SchoolProfile() {
     }
   ]);
 
-  const [akreditasi, setAkreditasi] = useState({
+  const [akreditasi] = useState({
     noSK: "123/BAN-SM/SK/2023",
     tmt: "2023-05-15",
     tst: "2028-05-15",
@@ -119,11 +119,6 @@ export default function SchoolProfile() {
     { value: "XI", label: "XI" },
     { value: "XII", label: "XII" },
     { value: "XIII", label: "XIII" },
-  ];
-
-  const yaTidakOptions = [
-    { value: "Ya", label: "Ya" },
-    { value: "Tidak", label: "Tidak" },
   ];
 
   const tabs = [
@@ -631,7 +626,7 @@ export default function SchoolProfile() {
                     </div>
                     <div className="w-full">
                       <Label className="text-center mb-2">Logo Sekolah</Label>
-                      <FileInput onChange={handleLogoChange} disabled />
+                      <FileInput onChange={handleLogoChange} />
                       <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
                         Format: JPG, PNG. Maksimal 2MB.
                       </p>
